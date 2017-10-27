@@ -468,23 +468,6 @@ This plot turned out to be the most important part of this analysis. It clearly 
 ### Plot Two
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, Plot_Two}
-ggplot(aes(x = citric.acid, y = sulphates, color = factor(quality)), data = wine) +
-  geom_point(alpha = 0.6, size = 1) + 
-  geom_smooth(method = 'lm', se = FALSE, size=1) +
-  scale_color_brewer(type='seq', palette = "Set1",
-                     guide=guide_legend(title='Quality')) +
-  labs(x = 'Citric Acid(g / dm^3)', y = 'Sulphates(g / dm3)',
-       title="Citric Acid vs. Sulphates") 
-
-```
-
-### Description Two
-
-This plot showed that the higher quantities of sulphates won't be enough to improve the quality of the wine. The amount of citric acid must higher too. If both the quantities of citric acid and the sulphates are higher, the quality of the wine would improve drastically.
-
-### Plot Three
-
-```{r echo=FALSE, message=FALSE, warning=FALSE, Plot_Three}
 ggplot(aes(x = factor(quality), y = volatile.acidity), data = wine) +
   geom_boxplot(alpha = 0.5, color = 'green') +
   geom_jitter(alpha = 0.2) +
@@ -493,9 +476,25 @@ ggplot(aes(x = factor(quality), y = volatile.acidity), data = wine) +
        title="Volatile acidity vs. Quality")
 ```
 
-### Description Three
+### Description Two
 
 This plot showed us that the higher the amount of volatile acid i.e. acetic acid, lesser the quality of wine. This plot is really significant because of the fact that no matter what we do with the wine, if we don't reduce the quantity of the acetic acid, the quality of the wine would definitely drop.
+
+### Plot Three
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, Plot_Three}
+ggplot(aes(x = citric.acid, y = sulphates, color = factor(quality)), data = wine) +
+  geom_point(alpha = 0.6, size = 1) + 
+  geom_smooth(method = 'lm', se = FALSE, size=1) +
+  scale_color_brewer(type='seq', palette = "Set1",
+                     guide=guide_legend(title='Quality')) +
+  labs(x = 'Citric Acid(g / dm^3)', y = 'Sulphates(g / dm3)',
+       title="Citric Acid vs. Sulphates") 
+```
+
+### Description Three
+
+This plot showed that the higher quantities of sulphates won't be enough to improve the quality of the wine. The amount of citric acid must higher too. If both the quantities of citric acid and the sulphates are higher, the quality of the wine would improve drastically.
 
 ------
 
