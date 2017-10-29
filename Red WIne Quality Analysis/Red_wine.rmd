@@ -1,5 +1,12 @@
-Red Wine Quality Analysis by Arvind Raj
-========================================================
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+title: "Red Wine Quality Analysis"
+author: Arvind_Raj
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+```
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, packages}
 setwd("D:/Studies/Udacity/Data Analyst Nanodegree/Term II/Project 2/Project")
